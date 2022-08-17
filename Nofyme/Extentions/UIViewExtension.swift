@@ -1,0 +1,31 @@
+//
+//  UIViewExtension.swift
+//  Nofyme (iOS)
+//
+//  Created by s b on 17.08.2022.
+//
+
+import UIKit
+import SwiftUI
+
+extension UIView {
+    
+    @available(iOS 13, *)
+    private struct Preview: UIViewRepresentable {
+        typealias UIViewType = UIView
+        let view: UIView
+        func makeUIView(context: Context) -> UIView {
+            return view
+        }
+        
+        func updateUIView(_ uiView: UIView, context: Context) {
+            //
+        }
+    }
+    
+    @available(iOS 13, *)
+    func showPreview() -> some View {
+        // inject self (the current UIView) for the preview
+        Preview(view: self)
+    }
+}
