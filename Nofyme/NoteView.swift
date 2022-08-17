@@ -19,7 +19,7 @@ class NoteViewController: UIViewController {
         let label = UILabel(frame: CGRect.zero)
         label.font = UIFont.systemFont(ofSize: 18)
         label.numberOfLines = 0
-        label.textColor = .black
+        label.textColor = .magenta
         return label
     }()
     

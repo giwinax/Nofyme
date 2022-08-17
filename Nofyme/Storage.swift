@@ -72,10 +72,10 @@ class Storage {
     }
     
     private func localStorageRetrieve() -> [NoteModel] {
-        let decoded = UserDefaults.standard.object(forKey: DefaultsKeys.note) as! Data
+        guard let decoded = UserDefaults.standard.object(forKey: DefaultsKeys.note) as? Data else { return [NoteModel]() }
         do
         {
-            let decodedNotes = try PropertyListDecoder().decode([NoteModel].self, from: decoded) 
+            let decodedNotes = try PropertyListDecoder().decode([NoteModel].self, from: decoded)
             return decodedNotes
         }
             catch

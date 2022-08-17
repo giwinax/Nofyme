@@ -11,7 +11,7 @@ import SnapKit
 class MainViewController: UITableViewController {
     
     let storage = Storage()
-    var notes = [NoteModel(name: "ASD"), NoteModel(name: "FGGH")] {
+    var notes = [NoteModel(name: "ASD", desc: "sdaasd"), NoteModel(name: "FGGH")] {
         didSet {
             tableView.reloadData()
         }
@@ -44,7 +44,6 @@ class MainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-#warning("Need to uncomment")
         self.notes = storage.notes
         
         self.view.addSubview(addButton)
@@ -111,20 +110,20 @@ class MainViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = notes[indexPath.row].name
+        cell.textLabel?.text = "\(notes[indexPath.row].name) -> \(String(describing: notes[indexPath.row].desc ?? ""))"
         return cell
     }
 }
 
 #if DEBUG
-import SwiftUI
-
-@available(iOS 13, *)
-struct MainViewController_Preview: PreviewProvider {
-    
-    static var previews: some View {
-        
-        MainViewController().showPreview()
-    }
-}
+//import SwiftUI
+//
+//@available(iOS 13, *)
+//struct MainViewController_Preview: PreviewProvider {
+//
+//    static var previews: some View {
+//
+//        MainViewController().showPreview()
+//    }
+//}
 #endif
