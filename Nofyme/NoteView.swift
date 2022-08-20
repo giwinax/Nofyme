@@ -64,7 +64,7 @@ class NoteViewController: UIViewController {
     
         storage.updateInPersistance(at: self.noteI, newNote)
         
-        self.notifications.addNotification(at: sender.date, name: newNote.name, desc: newNote.desc)
+        self.notifications.addNotification(atTime: sender.date, name: newNote.name, desc: newNote.desc)
     }
     
     override func viewDidLoad() {

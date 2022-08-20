@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32C4F43328AE316A000BC1C2 /* TestConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C4F43228AE316A000BC1C2 /* TestConstraints.swift */; };
 		32C6FD0B28AD0534003E8BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C6FD0A28AD0534003E8BE3 /* AppDelegate.swift */; };
 		32C6FD0D28AD0534003E8BE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C6FD0C28AD0534003E8BE3 /* SceneDelegate.swift */; };
 		32C6FD1428AD0535003E8BE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32C6FD1328AD0535003E8BE3 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32C4F43228AE316A000BC1C2 /* TestConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstraints.swift; sourceTree = "<group>"; };
 		32C6FD0728AD0534003E8BE3 /* Nofyme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nofyme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C6FD0A28AD0534003E8BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32C6FD0C28AD0534003E8BE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				32C6FD1F28AD053F003E8BE3 /* Extentions */,
 				32C6FD2328AD053F003E8BE3 /* MainViewController.swift */,
+				32C4F43228AE316A000BC1C2 /* TestConstraints.swift */,
 				32C6FD1E28AD053F003E8BE3 /* NoteModel.swift */,
 				32C6FD2428AD053F003E8BE3 /* NoteView.swift */,
 				32C6FD3028AD2359003E8BE3 /* Notifications.swift */,
@@ -170,6 +173,7 @@
 				32C6FD3128AD2359003E8BE3 /* Notifications.swift in Sources */,
 				32C6FD2628AD0540003E8BE3 /* UIViewControllerExtension.swift in Sources */,
 				32C6FD0B28AD0534003E8BE3 /* AppDelegate.swift in Sources */,
+				32C4F43328AE316A000BC1C2 /* TestConstraints.swift in Sources */,
 				32C6FD0D28AD0534003E8BE3 /* SceneDelegate.swift in Sources */,
 				32C6FD2928AD0540003E8BE3 /* MainViewController.swift in Sources */,
 				32C6FD2A28AD0540003E8BE3 /* NoteView.swift in Sources */,

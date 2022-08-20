@@ -6,10 +6,11 @@
 //
 
 import UserNotifications
+import CoreLocation
 
 class Notifications {
-    func addNotification(at: Date, name: String, desc: String?) {
-        
+    func addNotification(atTime: Date? = nil, atLocation: CLLocation? = nil, name: String, desc: String?) {
+        //TODO: User defaults on asking to notify
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
                 print("All set!")
@@ -22,10 +23,12 @@ class Notifications {
         content.subtitle = desc ?? ""
         content.sound = UNNotificationSound.default
         
-        let timeIntervalSinceNow = at.timeIntervalSinceNow
+        var trigger: UNNotificationTrigger!
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeIntervalSinceNow, repeats: false)
+        if let timeIntervalSinceNow = atTime?.timeIntervalSinceNow {
         
+        trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeIntervalSinceNow, repeats: false)
+        }
         // choose a random identifier
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         
